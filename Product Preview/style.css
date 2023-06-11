@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  --pry-clr: hsl(30, 38%, 92%);
+  --pry-clr-2: hsl(158, 36%, 37%);
+}
+
+body {
+  font-family: 'Montserrat', system-ui;
+  display: flex;
+  justify-content: center;
+  background-color: hsla(32, 37%, 92%, 0.384);
+  color: hsl(228, 12%, 48%);
+}
+.section {
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  background-color: var(--pry-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  /* box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.219); */
+}
+.section-image {
+  background-image: url('images/image-product-desktop.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+}
+.section-text {
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.section-text__intro {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: hsl(212, 21%, 14%);
+  font-family: 'Fraunces', system-ui;
+}
+.section-text__description {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.price-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.price-list p {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--pry-clr-2);
+}
+span {
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-decoration: line-through;
+}
+button img {
+  margin-right: 1rem;
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  background-color: var(--pry-clr-2);
+  outline: transparent;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 1.5em;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+button:hover {
+  background-color: hsl(157, 32%, 25%);
+}
+
+@media (max-width: 580px) {
+  .container {
+    flex-direction: column;
+    max-width: 440px;
+  }
+
+  .section-image {
+    background-image: url('images/image-product-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 30rem;
+  }
+  .section-text {
+    width: 100%;
+  }
+}
